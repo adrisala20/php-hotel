@@ -1,11 +1,24 @@
 <?php 
+
 $template="";
 foreach($hotels as $hotel){
-    echo "<p> HOTEL : " .$hotel["name"]."-".$hotel["description"]. "-".$hotel["parking"]."-".$hotel["vote"]. "-". $hotel['distance_to_center'] . "<br>"; 
+    $template .= "<tr> <td> {$hotel['name']}</td> <td>{$hotel['description']}</td> <td>{$hotel['parking']}</td> <td>{$hotel['vote']}</td><td>{$hotel['distance_to_center']} </td></tr>"; 
 }
 ?>
 <div>
-    <?php
-
-    ?>
+<table class="table table-hover">
+<thead>
+    <tr>
+      <th scope="col">Hotel</th>
+      <th scope="col">Descrizione</th>
+      <th scope="col">Parcheggio</th>
+      <th scope="col">Voto</th>
+      <th scope="col">Distanza dal centro</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?= $template ?>
+  </tbody>
+</table>
+   
 </div>
