@@ -14,15 +14,32 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-        <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js" defer></script>
     <title>hotel</title>
 </head>
 
 <body>
-   <header>
-    <div class="container">
-        <h1>Hotel</h1>
-    </div>
-   </header>
+    <header>
+        <div class="container">
+            <div class="row ">
+                <div class="col-8">
+                    <h1>Hotel</h1>
+                </div>
+                <div class="col-4">
+                    <form action="index.php" method="GET">
+                        <select class="form-select  form-select-sm" name="parking">
+                            <option selected>Filtra ricerca per parcheggio</option>
+                            <option value="all">Tutti</option>
+                            <option value="false">Parcheggio escluso</option>
+                            <option value="true">Parcheggio incluso</option>
+                        </select>
+                        <button type="submit">cerca</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </header>

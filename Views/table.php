@@ -20,5 +20,4 @@ foreach($hotels as $hotel){
   <?= $template ?>
   </tbody>
 </table>
-   
 </div>

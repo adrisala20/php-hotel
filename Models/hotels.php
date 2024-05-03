@@ -39,3 +39,11 @@
         ],
 
     ];
+
+    if(!empty($_GET['parking']) || (isset($_GET['parking']) && $_GET['parking']== 0)) {
+        $parking_ = $_GET['parking'];
+        $hotels_ = array_filter($hotels, function($hotel) use ($parking_){
+        return $hotel['parking'] == $parking_ || $parking_ ==='all'; 
+    });
+    var_dump($hotels_);
+    };
